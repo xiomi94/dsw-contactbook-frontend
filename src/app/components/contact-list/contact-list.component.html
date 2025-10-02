@@ -1,29 +1,9 @@
-<ul class="contact-list">
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-  <li>
-    <app-contact-item/>
-  </li>
-</ul>
+<div class="contact-list-container">
+  <ul class="contact-list">
+    @for (contact of contacts(); track contact.id) {
+      <li>
+        <app-contact-item [contact]="contact"/>
+      </li>
+    }
+  </ul>
+</div>

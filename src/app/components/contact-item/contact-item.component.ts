@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonIcon } from "@ionic/angular/standalone";
+import { ContactModel } from 'src/app/models/contact.model';
 
 @Component({
   selector: 'app-contact-item',
@@ -15,6 +16,6 @@ import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonIcon } from "@
 })
 export class ContactItemComponent {
 
-
+  contact = input.required<ContactModel>()
 
 }

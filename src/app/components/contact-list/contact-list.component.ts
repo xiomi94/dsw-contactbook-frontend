@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, input } from '@angular/core';
 import { ContactItemComponent } from "../contact-item/contact-item.component";
+import { ContactModel } from 'src/app/models/contact.model';
 
 @Component({
   selector: 'app-contact-list',
@@ -9,6 +10,6 @@ import { ContactItemComponent } from "../contact-item/contact-item.component";
 })
 export class ContactListComponent {
 
-
+  contacts = input.required<ContactModel[]>()
 
 }

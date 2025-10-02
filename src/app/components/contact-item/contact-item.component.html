@@ -3,11 +3,11 @@
     <ion-icon name="person-circle-sharp"/>
   </div>
   <ion-card-header>
-    <ion-card-title>Alonso Mederos Vazquez</ion-card-title>
+    <ion-card-title>{{ contact().name }}</ion-card-title>
   </ion-card-header>
 
   <ion-card-content>
-    <p>teléfono: 123456789</p>
-    <p>email: alonso@gmail.com</p>
+    <p>teléfono: {{ contact().phoneNumber }}</p>
+    <p>email: {{ contact().email }}</p>
   </ion-card-content>
 </ion-card>

@@ -1,11 +1,11 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Blank
+      Contactos
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-contact-list [contacts]="contacts()"/>
+  <app-contact-list [contacts]="contacts()" (deleteButtonClick)="deleteContact($event)"/>
 </ion-content>

@@ -9,5 +9,8 @@
   <ion-card-content>
     <p>teléfono: {{ contact().phoneNumber }}</p>
     <p>email: {{ contact().email }}</p>
+    <ion-button expand="block" color="danger" class="delete-button" (click)="deleteButtonClick.emit(contact())">
+      <ion-icon name="trash-outline" class="trash-icon"/>
+    </ion-button>
   </ion-card-content>
 </ion-card>

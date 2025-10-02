@@ -2,7 +2,7 @@
   <ul class="contact-list">
     @for (contact of contacts(); track contact.id) {
       <li>
-        <app-contact-item [contact]="contact"/>
+        <app-contact-item [contact]="contact" (deleteButtonClick)="deleteButtonClick.emit($event)"/>
       </li>
     }
   </ul>

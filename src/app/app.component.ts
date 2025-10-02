@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { addIcons } from 'ionicons';
-import { personCircleSharp } from 'ionicons/icons';
+import { personCircleSharp, trashOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-root',
@@ -13,6 +13,6 @@ import { personCircleSharp } from 'ionicons/icons';
 })
 export class AppComponent {
   constructor() {
-    addIcons({ personCircleSharp });
+    addIcons({ personCircleSharp, trashOutline });
   }
 }

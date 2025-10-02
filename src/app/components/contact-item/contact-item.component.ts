@@ -1,5 +1,5 @@
-import { Component, input } from '@angular/core';
-import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonIcon } from "@ionic/angular/standalone";
+import { Component, input, output } from '@angular/core';
+import { IonCard, IonCardContent, IonCardHeader, IonCardTitle, IonIcon, IonButton } from "@ionic/angular/standalone";
 import { ContactModel } from 'src/app/models/contact.model';
 
 @Component({
@@ -11,11 +11,13 @@ import { ContactModel } from 'src/app/models/contact.model';
     IonCardHeader,
     IonCardTitle,
     IonCardContent,
-    IonIcon
-  ],
+    IonIcon,
+    IonButton
+],
 })
 export class ContactItemComponent {
 
-  contact = input.required<ContactModel>()
+  contact = input.required<ContactModel>();
+  deleteButtonClick = output<ContactModel>();
 
 }

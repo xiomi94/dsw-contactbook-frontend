@@ -1,4 +1,4 @@
-import { Component, input } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { ContactItemComponent } from "../contact-item/contact-item.component";
 import { ContactModel } from 'src/app/models/contact.model';
 
@@ -10,6 +10,7 @@ import { ContactModel } from 'src/app/models/contact.model';
 })
 export class ContactListComponent {
 
-  contacts = input.required<ContactModel[]>()
+  contacts = input.required<ContactModel[]>();
+  deleteButtonClick = output<ContactModel>();
 
 }

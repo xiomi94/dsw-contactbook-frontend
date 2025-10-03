@@ -22,4 +22,10 @@ export class Backend {
 
     return this.http.delete(url);
   }
+
+  addNewContact(contact: ContactModel): Observable<ContactModel> {
+    const url = `${this.BACKEND_URL}/contacts`;
+
+    return this.http.post<ContactModel>(url, contact);
+  }
 }

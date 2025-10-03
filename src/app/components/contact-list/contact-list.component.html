@@ -1,9 +1,7 @@
-<div class="contact-list-container">
-  <ul class="contact-list">
-    @for (contact of contacts(); track contact.id) {
-      <li>
-        <app-contact-item [contact]="contact" (deleteButtonClick)="deleteButtonClick.emit($event)"/>
-      </li>
-    }
-  </ul>
-</div>
+<ul class="contact-list">
+  @for (contact of contacts(); track contact.id) {
+  <li style="width: 100%;">
+    <app-contact-item [contact]="contact" (deleteButtonClick)="deleteButtonClick.emit($event)" />
+  </li>
+  }
+</ul>

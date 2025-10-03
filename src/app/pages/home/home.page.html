@@ -7,5 +7,15 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <app-contact-list [contacts]="contacts()" (deleteButtonClick)="deleteContact($event)"/>
+  <div class="home-page-container">
+    <div class="home-page-center-container">
+      <div class="add-contact-button-container">
+        <ion-button (click)="setModalOpen(true)">Añadir contacto</ion-button>
+      </div>
+      <app-contact-list [contacts]="contacts()" (deleteButtonClick)="deleteContact($event)" />
+    </div>
+  </div>
 </ion-content>
+
+<app-add-new-contact (saveNewContact)="saveNewContact($event)" (closeModal)="setModalOpen(false)"
+  [isModalOpen]="isModalOpen()" />

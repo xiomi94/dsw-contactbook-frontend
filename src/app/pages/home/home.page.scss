@@ -1,0 +1,19 @@
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  padding-top: 15px;
+}
+
+.home-page-center-container {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.add-contact-button-container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
